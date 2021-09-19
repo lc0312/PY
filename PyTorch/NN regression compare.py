@@ -41,7 +41,7 @@ optmizer_0 = torch.optim.Adam (t_net_0.parameters(),lr=1E-4)
 optmizer_1 = torch.optim.Adam (t_net_1.parameters(), lr=1E-4)
 loss_func = torch.nn.MSELoss()
 
-for i in range (5000):
+for i in range (500):
 
     prediction = t_net_0(x_cuda)
     loss = loss_func(prediction,y_cuda)
@@ -49,7 +49,7 @@ for i in range (5000):
     loss.backward ()
     optmizer_0.step ()
 
-for i in range (5000):
+for i in range (500):
 
     prediction = t_net_1(x_cuda)
     loss = loss_func(prediction,y_cuda)
